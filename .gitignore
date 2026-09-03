@@ -1,0 +1,12 @@
+# RAW camera files
+*.CR2
+*.NEF
+*.ARW
+*.dng
+*.RAF
+
+# Original, unprocessed exports (kept outside the repo)
+originals/
+
+# macOS
+.DS_Store

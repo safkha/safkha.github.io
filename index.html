@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safeer Khan — Photography</title>
+<meta name="description" content="Street and landscape photography by Safeer Khan.">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Set theme before first paint to avoid a flash of the wrong color. */
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="title">
+    <h1>Safeer Khan</h1>
+    <p>Street and landscape photography</p>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+</header>
+
+<main class="gallery" id="gallery">
+
+  <!--
+    ADDING A PHOTO:
+    1. Drop the file into images/gallery/ (lowercase, hyphenated filename).
+    2. Copy one <a class="photo">...</a> block below and update src/href, width, height, and alt.
+    3. Commit and push. That's it — no build step, no manifest.
+
+    ALT TEXT:
+    Derived from the filename by convention (e.g. coast-at-dusk-01.jpg -> "Coast at dusk").
+    Override it by hand here whenever the auto-derived text isn't good enough.
+
+    To swap a placeholder for a real photo, change the src/href from
+    "images/placeholder/placeholder-01.jpg" to "images/gallery/your-photo-name.jpg"
+    and update width/height to match the real image's pixel dimensions.
+  -->
+
+  <a class="photo" href="images/placeholder/placeholder-01.jpg" data-index="0">
+    <img src="images/placeholder/placeholder-01.jpg" alt="Placeholder image, warm stone tone" width="2000" height="1333" loading="lazy">
+  </a>
+
+  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
+    <img src="images/placeholder/placeholder-02.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
+  </a>
+
+  <a class="photo" href="images/placeholder/placeholder-03.jpg" data-index="2">
+    <img src="images/placeholder/placeholder-03.jpg" alt="Placeholder image, deep taupe tone" width="2000" height="1333" loading="lazy">
+  </a>
+
+  <a class="photo" href="images/placeholder/placeholder-04.jpg" data-index="3">
+    <img src="images/placeholder/placeholder-04.jpg" alt="Placeholder image, light sand tone" width="1333" height="2000" loading="lazy">
+  </a>
+
+  <a class="photo" href="images/placeholder/placeholder-05.jpg" data-index="4">
+    <img src="images/placeholder/placeholder-05.jpg" alt="Placeholder image, muted blue-gray tone" width="2000" height="1333" loading="lazy">
+  </a>
+
+  <a class="photo" href="images/placeholder/placeholder-06.jpg" data-index="5">
+    <img src="images/placeholder/placeholder-06.jpg" alt="Placeholder image, muted olive tone" width="1333" height="2000" loading="lazy">
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <a href="mailto:thesafeerkhan@gmail.com">thesafeerkhan@gmail.com</a>
+  <!-- Add social links here, e.g.: <a href="https://instagram.com/yourhandle">Instagram</a> -->
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
