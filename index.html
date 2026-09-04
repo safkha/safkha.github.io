@@ -25,69 +25,27 @@
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
 </header>
 
-<main class="gallery" id="gallery">
+<main class="categories" id="categories">
 
   <!--
-    ADDING A PHOTO:
-    1. Drop the file into images/gallery/ (lowercase, hyphenated filename).
-    2. Copy one <a class="photo">...</a> block below and update src/href, width, height, and alt.
-    3. Commit and push. That's it — no build step, no manifest.
-
-    ALT TEXT:
-    Derived from the filename by convention (e.g. coast-at-dusk-01.jpg -> "Coast at dusk").
-    Override it by hand here whenever the auto-derived text isn't good enough.
-
-    To swap a placeholder for a real photo, change the src/href from
-    "images/placeholder/placeholder-01.jpg" to "images/gallery/your-photo-name.jpg"
-    and update width/height to match the real image's pixel dimensions.
+    ADDING A GALLERY:
+    1. Drop a new folder into images/gallery/ (e.g. images/gallery/Japan).
+    2. Copy tools/resize.sh or manually add web-ready photos to it.
+    3. Copy one <a class="category-card"> block below, point it at a
+       new page (e.g. japan.html), and use the folder's first photo
+       as the thumbnail.
+    4. Copy italy.html to japan.html and update the title/photo blocks
+       to match the new folder's images.
   -->
 
-  <!-- <a class="photo" href="images/placeholder/placeholder-01.jpg" data-index="0">
-    <img src="images/placeholder/placeholder-01.jpg" alt="Placeholder image, warm stone tone" width="2000" height="1333" loading="lazy">
-  </a> -->
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0183.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
+  <a class="category-card" href="italy.html">
+    <img src="images/gallery/Italy/Italy_1.JPG" alt="Italy" width="2000" height="1333" loading="lazy">
+    <span class="category-label">Italy</span>
   </a>
 
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0281.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0416.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0496.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0531.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0606.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-  
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0630.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0697.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_0780.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_1253.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
-  </a>
-
-  <a class="photo" href="images/placeholder/placeholder-02.jpg" data-index="1">
-    <img src="images/gallery/img_1519.jpg" alt="Placeholder image, cool slate tone" width="1333" height="2000" loading="lazy">
+  <a class="category-card" href="iceland.html">
+    <img src="images/gallery/Iceland/iceland_1.jpeg" alt="Iceland" width="1536" height="2048" loading="lazy">
+    <span class="category-label">Iceland</span>
   </a>
 
 </main>
