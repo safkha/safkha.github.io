@@ -47,13 +47,18 @@ a {
   gap: 1rem;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem 2.5rem;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--bg);
 }
 
 .site-header .title h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin: 0 0 0.35rem;
 }
 
@@ -63,17 +68,33 @@ a {
   font-size: 0.95rem;
 }
 
-.back-link {
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin: 0 0 0.5rem;
 }
 
-.back-link a {
+.site-name {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.meta-row .divider {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.back-link {
   color: var(--muted);
   font-size: 0.85rem;
   text-decoration: none;
 }
 
-.back-link a:hover {
+.back-link:hover {
   text-decoration: underline;
 }
 
