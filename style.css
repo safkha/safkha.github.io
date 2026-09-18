@@ -139,6 +139,74 @@ a {
   opacity: 0.7;
 }
 
+/* Top line: site name / back link on the left, action buttons on the right; title below */
+.site-header:has(.meta-row) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.site-header:has(.meta-row) .title {
+  display: contents;
+}
+
+.site-header:has(.meta-row) .meta-row {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.site-header:has(.meta-row) .title h1 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
+}
+
+.header-actions {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@media (max-width: 639px) {
+  .site-header:has(.meta-row) .title h1 {
+    font-size: 2rem;
+  }
+
+  .site-header:has(.meta-row) {
+    column-gap: 0.5rem;
+  }
+
+  .meta-row {
+    gap: 0.3rem;
+  }
+
+  .site-name {
+    letter-spacing: 0.04em;
+  }
+
+  .site-name,
+  .meta-row .divider,
+  .back-link {
+    font-size: 0.72rem;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .header-link,
+  .theme-toggle {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .header-link .long {
+    display: none;
+  }
+}
+
 /* ---- Gallery grid (CSS columns masonry) ---- */
 .gallery {
   max-width: 1400px;
