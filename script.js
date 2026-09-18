@@ -3,7 +3,8 @@
   var root = document.documentElement;
 
   function syncLabel() {
-    toggle.textContent = root.getAttribute("data-theme") === "dark" ? "Light" : "Dark";
+    var dark = root.getAttribute("data-theme") === "dark";
+    toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
   }
   syncLabel();
 
